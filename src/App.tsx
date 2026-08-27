@@ -1,43 +1,18 @@
-import { Routes, Route, Navigate } from "react-router-dom";
-import { AppProvider } from "./context/AppContext";
-
-import Landing from "./pages/Landing";
-import {
-  Register,
-  Intake,
-  Assessment,
-  Documents,
-  Summary
-} from "./pages/PatientPages";
-
-import {
-  DoctorDashboard,
-  DoctorCase
-} from "./pages/Doctor";
-
 export default function App() {
   return (
-    <AppProvider>
-      <Routes>
-
-        {/* Landing */}
-        <Route path="/" element={<Landing />} />
-
-        {/* Patient Journey */}
-        <Route path="/patient/register" element={<Register />} />
-        <Route path="/patient/intake" element={<Intake />} />
-        <Route path="/patient/assessment" element={<Assessment />} />
-        <Route path="/patient/documents" element={<Documents />} />
-        <Route path="/patient/summary" element={<Summary />} />
-
-        {/* Doctor Portal */}
-        <Route path="/doctor" element={<DoctorDashboard />} />
-        <Route path="/doctor/patient/:id" element={<DoctorCase />} />
-
-        {/* Unknown routes */}
-        <Route path="*" element={<Navigate to="/" replace />} />
-
-      </Routes>
-    </AppProvider>
+    <div className="min-h-screen bg-[#0b1713] text-[#e0e8e4] flex flex-col items-center justify-center p-6 text-center">
+      <span className="px-4 py-1.5 rounded-full bg-[#162e25] border border-[#274f40] text-xs font-semibold tracking-wider uppercase text-[#88a795] mb-4">
+        AyuCare Platform
+      </span>
+      <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-[#f0f5f2] mb-4">
+        Holistic Care That Inspires
+      </h1>
+      <p className="max-w-xl text-[#9cb3a7] text-lg mb-8">
+        Integrating modern clinical precision with organic wellness management.
+      </p>
+      <button className="px-6 py-3 rounded-full bg-[#2a5443] hover:bg-[#346652] text-white font-medium transition-all shadow-lg border border-[#3e7862]">
+        Explore Platform
+      </button>
+    </div>
   );
 }
