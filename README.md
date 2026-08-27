@@ -1,89 +1,22 @@
-# AyuCare — SIH26047 Frontend Prototype
+# AyuCare — Modern Holistic Healthcare Platform
 
-Frontend-only React + TypeScript + Vite + Tailwind CSS prototype for the Smart India Hackathon "Patient Case-Taking Software" concept.
+AyuCare is a modern web platform combining clinical healthcare management with holistic wellness design. The UI draws inspiration from luxury dark-mode aesthetics, rich emerald tones, and organic design elements.
 
-## Run
+## 🌿 Design Palette
+- **Background Deep**: `#0b1713`
+- **Surface Elevation**: `#132620` / `#1b332b`
+- **Accent Emerald**: `#2e5e4a`
+- **Highlight Gold/Sage**: `#d4af37` / `#88a795`
+- **Text Primary**: `#e0e8e4`
 
-Requirements:
-- Node.js 18+ (20+ recommended)
-- VS Code is optional but recommended
+## 🚀 Getting Started
 
-```bash
-npm install
-npm run dev
-```
+### Prerequisites
+- Node.js (v18.0 or higher)
+- npm or yarn
 
-Open the local URL printed by Vite, normally:
+### Installation
 
-http://localhost:5173
-
-For a production build:
-
-```bash
-npm run build
-npm run preview
-```
-
-## Demo flow
-
-Landing
-→ Patient Registration
-→ Consent + Language
-→ Patient Intake
-→ Simulated Voice/Text
-→ Ayurveda Assessment
-→ Document Upload
-→ Mock OCR
-→ AI Summary
-→ Doctor Dashboard
-→ Patient Case
-→ Red Flags
-→ Edit
-→ Approve
-→ Doctor Verified
-
-## Folder structure
-
-```text
-src/
-├── components/
-│   ├── layout.tsx
-│   ├── patient.tsx
-│   └── ui.tsx
-├── context/
-│   └── AppContext.tsx
-├── data/
-│   └── mockData.ts
-├── pages/
-│   ├── Landing.tsx
-│   ├── PatientPages.tsx
-│   └── Doctor.tsx
-├── services/
-│   └── api.ts
-├── types.ts
-├── App.tsx
-├── index.css
-└── main.tsx
-```
-
-## Mock integrations
-
-- Voice: `VoiceButton` simulates a 1.5-second recording and inserts a predefined response.
-- OCR: `uploadDocument()` waits briefly and returns demo extracted medical fields.
-- AI summary: `generateSummary()` waits briefly and the summary page creates a structured mock draft.
-- Database/API: all state is local React state + localStorage.
-- Doctor approval: `approveCase()` simulates a request and the UI changes to `Doctor Verified`.
-
-## Backend replacement points
-
-Replace the functions in `src/services/api.ts` with `fetch()`/Axios calls later.
-
-Suggested future endpoints:
-- `getPatients()` → `GET /doctor/patients`
-- `getPatientCase(id)` → `GET /doctor/patient/{id}`
-- `submitPatientResponse()` → `POST /answers`
-- `uploadDocument()` → `POST /documents/upload`
-- `generateSummary()` → `POST /summary/generate`
-- `approveCase()` → `POST /summary/{id}/approve`
-
-The UI intentionally does not implement real diagnosis, real medical decision-making, real authentication, a real database, or real AI.
+1. Install dependencies:
+   ```bash
+   npm install
